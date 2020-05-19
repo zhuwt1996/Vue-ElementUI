@@ -31,7 +31,7 @@ import {
   Footer,
   Table,
   TableColumn,
-  
+  Pagination
 } from 'element-ui';
 
 
@@ -51,3 +51,5 @@ Vue.use(DropdownMenu);
 Vue.use(DropdownItem);
 Vue.use(Table);
 Vue.use(TableColumn);
+Vue.use(Pagination)
+

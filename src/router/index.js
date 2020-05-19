@@ -22,6 +22,11 @@ export default new Router({
       path: '/container-menu',
       name: 'container-menu',
       component: () => import("../pages/container-menu/container-menu"),
+    },
+    {
+      path: '/pagination',
+      name: 'pagination',
+      component: () => import("../pages/pagination/pagination"),
     }
   ]
 })

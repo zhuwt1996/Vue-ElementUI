@@ -3,7 +3,7 @@
   <div class="hello">
     <img src="../assets/logo.png">
     <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
+    <h2>Templates</h2>
     <ul>
       <li @click="jumpToPage(1)">
         <a>
@@ -12,18 +12,15 @@
       </li>
       <li @click="jumpToPage(2)">
         <a>
-          Container-menu
+          Container-Menu-Dropdown-Table
+        </a>
+      </li>
+      <li @click="jumpToPage(3)">
+        <a>
+          Pagination
         </a>
       </li>
       <!-- <li>
-        <a
-          href="https://chat.vuejs.org"
-          target="_blank"
-        >
-          Community Chat
-        </a>
-      </li>
-      <li>
         <a
           href="https://twitter.com/vuejs"
           target="_blank"
@@ -84,7 +81,7 @@ export default {
   name: 'Index',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Element-UI Demo with Vue.js '
     }
   },
   methods: {
@@ -99,6 +96,11 @@ export default {
         case 2:
           this.$router.push({
             path: '/container-menu'
+          })
+          break;
+        case 3:
+          this.$router.push({
+            path: '/pagination'
           })
           break;
         default: 
