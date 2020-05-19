@@ -20,16 +20,13 @@
           Pagination
         </a>
       </li>
-      <!-- <li>
-        <a
-          href="https://twitter.com/vuejs"
-          target="_blank"
-        >
-          Twitter
+       <li>
+        <a @click="jumpToPage(4)">
+          ToolTip
         </a>
       </li>
       <br>
-      <li>
+      <!--<li>
         <a
           href="http://vuejs-templates.github.io/webpack/"
           target="_blank"
@@ -103,6 +100,10 @@ export default {
             path: '/pagination'
           })
           break;
+        case 4:
+          this.$router.push({
+            path: '/tooltip'
+          })
         default: 
           return
       }
