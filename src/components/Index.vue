@@ -1,17 +1,16 @@
 <template>
+
   <div class="hello">
+    <img src="../assets/logo.png">
     <h1>{{ msg }}</h1>
     <h2>Essential Links</h2>
     <ul>
-      <li>
-        <a
-          href="https://vuejs.org"
-          target="_blank"
-        >
-          Core Docs
+      <li @click="jumpToPage(1)">
+        <a>
+          Layout
         </a>
       </li>
-      <li>
+      <!-- <li>
         <a
           href="https://forum.vuejs.org"
           target="_blank"
@@ -78,17 +77,28 @@
         >
           awesome-vue
         </a>
-      </li>
+      </li> -->
     </ul>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'Index',
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
+    }
+  },
+  methods: {
+    jumpToPage(pageIndex){
+      console.log(pageIndex)
+      switch (pageIndex){
+        case 1: 
+          this.$router.push({
+            path: '/layout'
+          })
+      }
     }
   }
 }
@@ -109,5 +119,7 @@ li {
 }
 a {
   color: #42b983;
+  border-bottom: 1px solid #43b983;
+  cursor: pointer;
 }
 </style>
