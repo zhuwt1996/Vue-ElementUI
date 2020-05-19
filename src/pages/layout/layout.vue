@@ -5,24 +5,49 @@ el-col  通过span控制占比(总24份)
  -->
 <template>
   <div>
-    <h3>普通</h3>
+    <div>
+        <h3>普通</h3>
     <span>el-col  通过:span控制占比(总24份)</span>
     <el-row>
-      <el-col :span="24">
+        <el-col :span="24">
         <div class="grid-content bg-purple-dark"></div>
-      </el-col>
+        </el-col>
     </el-row>
     <el-row>
-      <el-col :span="8">
+        <el-col :span="8">
         <div class="grid-content bg-purple"></div>
-      </el-col>
-      <el-col :span="8">
+        </el-col>
+        <el-col :span="8">
         <div class="grid-content bg-purple-light"></div>
-      </el-col>
-      <el-col :span="8">
+        </el-col>
+        <el-col :span="8">
         <div class="grid-content bg-purple"></div>
-      </el-col>
+        </el-col>
     </el-row>
+    </div>
+    <div>
+        <h3>分栏间隔</h3>
+        <span>使用el-row的gutter属性</span>
+        <el-row :gutter="20">
+            <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
+            <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
+            <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
+            <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
+        </el-row>
+        
+    </div>
+
+    <div>
+        <h3>偏移</h3>
+        <span>使用el-row的offset属性</span>
+        <el-row :gutter="20">
+            <el-col :span="6" :offset="6"><div class="grid-content bg-purple"></div></el-col>
+            <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
+        </el-row>
+        
+    </div>
+
+    <h3>通过 flex 布局来对分栏进行灵活的对齐</h3>
   </div>
 </template>
 

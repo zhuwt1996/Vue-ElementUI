@@ -10,15 +10,12 @@
           Layout
         </a>
       </li>
-      <!-- <li>
-        <a
-          href="https://forum.vuejs.org"
-          target="_blank"
-        >
-          Forum
+      <li @click="jumpToPage(2)">
+        <a>
+          Container-menu
         </a>
       </li>
-      <li>
+      <!-- <li>
         <a
           href="https://chat.vuejs.org"
           target="_blank"
@@ -98,6 +95,14 @@ export default {
           this.$router.push({
             path: '/layout'
           })
+          break;
+        case 2:
+          this.$router.push({
+            path: '/container-menu'
+          })
+          break;
+        default: 
+          return
       }
     }
   }
